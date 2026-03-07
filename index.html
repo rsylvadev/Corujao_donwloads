@@ -3,56 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CORUJÃO DOWNLOADS</title>
-    <!-- Link para o CSS externo -->
+    <title>Corujão Download - Baixe os melhores programas</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
 </head>
 <body>
 
     <header>
-        <center><h1>Bem-vindo ao CORUJÃO DOWNLOADS</h1></center>
-        <p>Baixe arquivos de forma rápida e segura</p>
+        <a href="#" class="logo">🦉 CORUJÃO DOWNLOAD</a>
+        <form class="search-bar" onsubmit="event.preventDefault();">
+            <input type="text" placeholder="Buscar programas, jogos...">
+            <button type="submit">Buscar</button>
+        </form>
     </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Categorias</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-    </nav>
+    <main>
+        <h2 class="section-title">Programas em Destaque</h2>
+        
+        <div class="grid-downloads">
+            
+            <div class="card">
+                <div class="card-icon">📁</div>
+                <h3 class="card-title">NOME DO ARQUIVO 1</h3>
+                <p class="card-desc">Breve descrição do programa e para que ele serve. Leve e rápido.</p>
+                <a href="LINK_PARA_O_SEU_ARQUIVO.zip" class="btn-download">Baixar Agora</a>
+            </div>
 
-    <section class="hero">
-        <h2>Destaques da Semana</h2>
-        <p>Confira os arquivos mais baixados!</p>
-        <img src="assets/fundo.jpeg" alt="Imagem de fundo" class="hero-img">
-    </section>
+            <div class="card">
+                <div class="card-icon">🎮</div>
+                <h3 class="card-title">NOME DO ARQUIVO 2</h3>
+                <p class="card-desc">Jogo completo com todas as atualizações recentes.</p>
+                <a href="LINK_PARA_O_SEU_ARQUIVO_2.zip" class="btn-download">Baixar Agora</a>
+            </div>
 
-    <div class="container">
-        <div class="file-list">
-            <h3>Arquivo 1</h3>
-            <p>Descrição breve do arquivo.</p>
-            <a href="#" class="download-btn">Download</a>
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3 class="card-title">NOME DO ARQUIVO 3</h3>
+                <p class="card-desc">Ferramenta essencial para manutenção do seu sistema Windows.</p>
+                <a href="LINK_PARA_O_SEU_ARQUIVO_3.zip" class="btn-download">Baixar Agora</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎵</div>
+                <h3 class="card-title">NOME DO ARQUIVO 4</h3>
+                <p class="card-desc">O melhor reprodutor de áudio e vídeo da atualidade.</p>
+                <a href="LINK_PARA_O_SEU_ARQUIVO_4.zip" class="btn-download">Baixar Agora</a>
+            </div>
+
         </div>
-
-        <div class="file-list">
-            <h3>Arquivo 2</h3>
-            <p>Descrição breve do arquivo.</p>
-            <a href="#" class="download-btn">Download</a>
-        </div>
-
-        <div class="file-list">
-            <h3>Arquivo 3</h3>
-            <p>Descrição breve do arquivo.</p>
-            <a href="#" class="download-btn">Download</a>
-        </div>
-    </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 - CORUJÃO DOWNLOADS</p>
+        <p>&copy; 2026 Corujão Download. Todos os direitos reservados.</p>
+        <p><small>Site seguro e responsivo. Hospede atrás da Cloudflare para proteção DDoS.</small></p>
     </footer>
 
-    <!-- Script externo -->
-    <script src="script.js"></script>
 </body>
 </html>
