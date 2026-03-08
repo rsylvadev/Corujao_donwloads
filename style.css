@@ -1,168 +1,179 @@
-/* Variáveis de Cores (Fácil de mudar depois se você quiser) */
+/* Variáveis de Cores Premium */
 :root {
-    --bg-color: #121212;
-    --bg-card: #1e1e1e;
-    --primary-color: #ff9800; /* Laranja Coruja */
-    --primary-hover: #e68a00;
-    --text-light: #f5f5f5;
-    --text-muted: #aaaaaa;
+    --bg-dark: #0f1115;
+    --bg-card: rgba(28, 31, 38, 0.6); /* Mais transparente para ver o fundo */
+    --primary: #ff6b00;
+    --primary-hover: #e65c00;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: rgba(46, 52, 64, 0.6);
 }
 
-/* Estilos base */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-light);
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #0a0a0a;
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
+/* --- FUNDO DO SITE CONSERTADO --- */
+body {
+    /* Película escura + Sua Imagem */
+    background-image: linear-gradient(rgba(15, 17, 21, 0.6), rgba(15, 17, 21, 0.95)), url('assets/fundo.jpeg');
+    background-size: cover;
+    background-position: center top; /* Alinha pelo topo para não cortar a coruja */
+    background-attachment: fixed; /* Efeito parallax perfeito */
+    background-repeat: no-repeat;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: rgba(15, 17, 21, 0.7); /* Bem transparente */
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px); /* Vidro fosco no menu */
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    border-bottom: 2px solid var(--primary-color);
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary);
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    justify-self: start;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
 }
 
 .search-bar {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 8px 15px;
+    width: 280px;
+    justify-self: end;
 }
 
 .search-bar input {
-    padding: 10px 15px;
-    border-radius: 5px;
+    background: transparent;
     border: none;
-    width: 300px;
-    background-color: #2a2a2a;
     color: white;
+    width: 100%;
+    outline: none;
+    margin-left: 10px;
 }
 
-.search-bar button {
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.search-bar i {
+    color: var(--text-muted);
+}
+
+/* --- BANNER PRINCIPAL CONSERTADO --- */
+.hero {
+    /* Degradê que é escuro na esquerda (para ler o texto) e transparente na direita (para ver a coruja) */
+    background: linear-gradient(to right, rgba(15, 17, 21, 0.95) 0%, rgba(15, 17, 21, 0) 100%);
+    padding: 80px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    background-color: rgba(255, 107, 0, 0.2);
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
     font-weight: bold;
-    transition: background 0.3s;
+    display: inline-block;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary);
 }
 
-.search-bar button:hover {
-    background-color: var(--primary-hover);
-}
+.hero h1 { font-size: 42px; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+.hero p { color: #e2e8f0; max-width: 600px; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); font-size: 17px; }
+.hero-actions { display: flex; align-items: center; gap: 20px; }
 
-/* Área Principal */
-main {
-    padding: 40px 5%;
-}
-
-.section-title {
-    margin-bottom: 30px;
-    font-size: 24px;
-    border-left: 5px solid var(--primary-color);
-    padding-left: 10px;
-}
-
-/* Grid de Downloads Responsivo */
-.grid-downloads {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-/* Cartão de Arquivo */
-.card {
-    background-color: var(--bg-card);
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 25px;
     border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(255, 152, 0, 0.2);
-}
-
-.card-icon {
-    width: 80px;
-    height: 80px;
-    background-color: #333;
-    border-radius: 15px;
-    margin: 0 auto 15px;
+    text-decoration: none;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: var(--primary-color);
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
 }
+.btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
 
-.card-title {
-    font-size: 18px;
-    margin: 10px 0;
-    color: var(--text-light);
-}
+/* CARDS E GRID */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+.section-header { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+.grid-downloads { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
 
-.card-desc {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-    height: 40px;
+.card {
+    background-color: var(--bg-card);
+    backdrop-filter: blur(12px); /* Efeito de vidro mais forte nos cartões */
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
     overflow: hidden;
+    transition: 0.3s;
 }
 
-.btn-download {
-    display: inline-block;
-    width: 100%;
-    padding: 12px 0;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
+.card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
+.card-header { padding: 20px; display: flex; justify-content: space-between; }
+.card-icon { width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; }
+.blue { background: #3b82f6; } .green { background: #10b981; } .orange { background: #f59e0b; } .purple { background: #8b5cf6; }
+.badge { background: rgba(0,0,0,0.4); color: var(--text-main); font-size: 12px; padding: 4px 10px; border-radius: 12px; font-weight: bold; }
+.card-body { padding: 0 20px 20px; }
+.card-title { font-size: 18px; margin-bottom: 5px; }
+.card-desc { color: #cbd5e1; font-size: 14px; margin-bottom: 15px; }
+.card-meta { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-main); background: rgba(0,0,0,0.4); padding: 8px; border-radius: 6px; }
+.card-meta i { color: #fbbf24; }
+.card-footer { padding: 15px 20px; border-top: 1px solid var(--border-color); }
+.btn-download { display: block; text-align: center; background: rgba(255,255,255,0.1); color: white; text-decoration: none; padding: 10px; border-radius: 6px; font-weight: bold; transition: 0.3s;}
+.btn-download:hover { background: var(--primary); }
 
-.btn-download:hover {
-    background-color: #45a049;
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0a0a0a;
-    color: var(--text-muted);
-    margin-top: 50px;
-    border-top: 1px solid #333;
-}
-
-/* Responsividade para celulares */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .search-bar input {
-        width: 100%;
-    }
-    .search-bar {
-        width: 100%;
-    }
-}
+footer { background: var(--bg-card); padding: 30px; margin-top: 50px; text-align: center; border-top: 1px solid var(--border-color); backdrop-filter: blur(10px); }
+.footer-logo { color: var(--primary); font-size: 20px; font-weight: bold; margin-bottom: 10px; }
