@@ -3,59 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corujão Download - Baixe os melhores programas</title>
+    <title>Corujão Download | O Maior Portal de Softwares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">🦉 CORUJÃO DOWNLOAD</a>
-        <form class="search-bar" onsubmit="event.preventDefault();">
-            <input type="text" placeholder="Buscar programas, jogos...">
-            <button type="submit">Buscar</button>
-        </form>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-owl"></i> CORUJÃO
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#" class="active"><i class="fa-solid fa-house"></i> Início</a></li>
+                <li><a href="#"><i class="fa-brands fa-windows"></i> Windows</a></li>
+                <li><a href="#"><i class="fa-brands fa-apple"></i> Mac OS</a></li>
+                <li><a href="#"><i class="fa-brands fa-android"></i> Android</a></li>
+                <li><a href="#"><i class="fa-solid fa-gamepad"></i> Jogos</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+            </ul>
+
+            <form class="search-bar" onsubmit="event.preventDefault();">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Busque programas...">
+            </form>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Destaque da Semana</span>
+            <h1>Limpador de Sistema Pro 2026</h1>
+            <p>Deixe seu PC até 200% mais rápido com a nova atualização. Limpeza profunda de registro, remoção de arquivos inúteis e otimização de memória em um clique.</p>
+            <div class="hero-actions">
+                <a href="#" class="btn-primary"><i class="fa-solid fa-download"></i> Baixar Agora (12MB)</a>
+                <span class="os-support"><i class="fa-brands fa-windows"></i> Windows 10/11</span>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h2 class="section-title">Programas em Destaque</h2>
+    <main class="container">
+        <div class="section-header">
+            <h2><i class="fa-solid fa-fire"></i> Adicionados Recentemente</h2>
+        </div>
         
         <div class="grid-downloads">
-            
-            <div class="card">
-                <div class="card-icon">📁</div>
-                <h3 class="card-title">NOME DO ARQUIVO 1</h3>
-                <p class="card-desc">Breve descrição do programa e para que ele serve. Leve e rápido.</p>
-                <a href="LINK_PARA_O_SEU_ARQUIVO.zip" class="btn-download">Baixar Agora</a>
-            </div>
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon blue"><i class="fa-solid fa-shield-halved"></i></div>
+                    <span class="badge">Segurança</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Coruja Antivírus Plus</h3>
+                    <p class="card-desc">Proteção em tempo real contra malwares.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-star"></i> 4.8</span>
+                        <span><i class="fa-brands fa-windows"></i> Windows</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Baixar</a>
+                </div>
+            </article>
 
-            <div class="card">
-                <div class="card-icon">🎮</div>
-                <h3 class="card-title">NOME DO ARQUIVO 2</h3>
-                <p class="card-desc">Jogo completo com todas as atualizações recentes.</p>
-                <a href="LINK_PARA_O_SEU_ARQUIVO_2.zip" class="btn-download">Baixar Agora</a>
-            </div>
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon green"><i class="fa-solid fa-gamepad"></i></div>
+                    <span class="badge">Jogos</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Super Corrida 3D</h3>
+                    <p class="card-desc">Gráficos ultra realistas e multiplayer.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-star"></i> 4.9</span>
+                        <span><i class="fa-brands fa-windows"></i> Windows</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Baixar</a>
+                </div>
+            </article>
 
-            <div class="card">
-                <div class="card-icon">🛠️</div>
-                <h3 class="card-title">NOME DO ARQUIVO 3</h3>
-                <p class="card-desc">Ferramenta essencial para manutenção do seu sistema Windows.</p>
-                <a href="LINK_PARA_O_SEU_ARQUIVO_3.zip" class="btn-download">Baixar Agora</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">🎵</div>
-                <h3 class="card-title">NOME DO ARQUIVO 4</h3>
-                <p class="card-desc">O melhor reprodutor de áudio e vídeo da atualidade.</p>
-                <a href="LINK_PARA_O_SEU_ARQUIVO_4.zip" class="btn-download">Baixar Agora</a>
-            </div>
-
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-icon orange"><i class="fa-solid fa-music"></i></div>
+                    <span class="badge">Áudio</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Reprodutor AudioMax</h3>
+                    <p class="card-desc">Equalizador profissional integrado.</p>
+                    <div class="card-meta">
+                        <span><i class="fa-solid fa-star"></i> 4.5</span>
+                        <span><i class="fa-brands fa-android"></i> Android</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn-download"><i class="fa-solid fa-download"></i> Baixar</a>
+                </div>
+            </article>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Corujão Download. Todos os direitos reservados.</p>
-        <p><small>Site seguro e responsivo. Hospede atrás da Cloudflare para proteção DDoS.</small></p>
+        <div class="footer-content">
+            <div class="footer-logo"><i class="fa-solid fa-owl"></i> CORUJÃO DOWNLOAD</div>
+            <p>O seu portal seguro para baixar os melhores softwares da internet.</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
